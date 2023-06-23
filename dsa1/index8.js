@@ -1,7 +1,6 @@
 function findErrorNums(nums) {
     let xorResult = 0;
 
-    // XOR all the numbers in nums and from 1 to n
     for (let num of nums) {
         xorResult ^= num;
     }
@@ -9,13 +8,11 @@ function findErrorNums(nums) {
         xorResult ^= i;
     }
 
-    // Find the rightmost set bit (bitMask)
     let bitMask = xorResult & (-xorResult);
 
     let num1 = 0;
     let num2 = 0;
 
-    // Separate the numbers based on the rightmost set bit
     for (let num of nums) {
         if ((num & bitMask) !== 0) {
             num1 ^= num;

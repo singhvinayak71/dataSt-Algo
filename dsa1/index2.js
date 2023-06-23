@@ -12,7 +12,6 @@ function removeElement(nums, val) {
     return j;
   }
   
-  // Example usage:
   const nums = [3, 2, 2, 3];
   const val = 3;
   
